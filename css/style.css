@@ -21,7 +21,7 @@ body {
 }
 
 .contenedor {
-    width: 80%;
+    width: auto;
     height: auto;
     display: grid;
     grid-template-columns: repeat(4,minmax(100px,150px));
@@ -34,6 +34,7 @@ body {
 
 .usuario {
     background-color: var(--Violet);
+    border-radius: 10px 10px;
 }
 
 .perfil__img {
@@ -49,14 +50,14 @@ body {
 .cardC {
     background-color: red;
     position: relative;
+    border-radius: 10px 10px;
 }
 
 .cardCSub{
     height: 80%;
     background-color: blue;
     border-radius: 10px 10px 0 0;
-    position: absolute;
-    top: 0;
+   margin-top: 30px;
 }
 
 .usuario{
@@ -71,7 +72,12 @@ body {
 }
 
 .card3 {
+    background-image: url("../images/icon-study.svg");
     grid-area: card3;
+    background-color: var(--Light-red);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
 }
 
 .card4 {
