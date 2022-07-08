@@ -1,7 +1,7 @@
 /* ### Primary */
 :root {
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Light-red-w: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
@@ -18,13 +18,16 @@
 
 body {
     background-color: var(--Very-dark-blue);
+
 }
 
+
+
 .contenedor {
-    width: auto;
+    width: 600px;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(4,minmax(100px,150px));
+    grid-template-columns: repeat(4, minmax(100px, 150px));
     grid-template-areas: "usuario card1 card2 card3"
         "usuario card4 card5 card6";
     gap: 10px;
@@ -35,6 +38,12 @@ body {
 .usuario {
     background-color: var(--Violet);
     border-radius: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* width: 130px; */
+    position: relative;
+    padding: 10px;
 }
 
 .perfil__img {
@@ -45,35 +54,64 @@ body {
 .registro {
     background-color: var(--Dark-blue);
     color: var(--Pale-Blue);
+    position: absolute;
+    width: 87%;
+    bottom: 0;
+    padding: 10px;
+    border-radius: 10px 10px;
+    left: 0;
+}
+
+.registro p:hover{
+    color: white;
+    cursor: pointer;
 }
 
 .cardC {
     background-color: red;
     position: relative;
     border-radius: 10px 10px;
+    position: relative;
+    height: 150px;
 }
 
-.cardCSub{
-    height: 80%;
-    background-color: blue;
+.cardCSub {
+    height: 100px;
+    background-color: var(--Dark-blue);
     border-radius: 10px 10px 0 0;
-   margin-top: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    bottom: 0;
+    padding: 10px;
 }
 
-.usuario{
+.usuario {
     grid-area: usuario;
 }
+
 .card1 {
     grid-area: card1;
+    background-image: url("../images/icon-work.svg");
+    background-color: var(--Light-red-w);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
 }
 
 .card2 {
     grid-area: card2;
+    background-image: url("../images/icon-play.svg");
+    background-color: var(--Soft-blue);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
 }
 
 .card3 {
-    background-image: url("../images/icon-study.svg");
     grid-area: card3;
+    background-image: url("../images/icon-study.svg");
     background-color: var(--Light-red);
     background-size: 40px;
     background-repeat: repeat-y;
@@ -82,12 +120,46 @@ body {
 
 .card4 {
     grid-area: card4;
+    background-image: url("../images/icon-exercise.svg");
+    background-color: var(--Lime-green);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
 }
 
 .card5 {
     grid-area: card5;
+    background-image: url("../images/icon-social.svg");
+    background-color: var(--Violet);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
 }
 
 .card6 {
     grid-area: card6;
+    background-image: url("../images/icon-self-care.svg");
+    background-color: var(--Soft-orange);
+    background-size: 40px;
+    background-repeat: repeat-y;
+    background-position: 90px 2px;
+}
+
+.cardCSub {
+    color: white;
+}
+
+.lbTitlo {
+    font-size: 18px;
+}
+
+.lbTiempo {
+    height: auto;
+    font-size: 25px;
+}
+
+.last {
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 1px;
 }
