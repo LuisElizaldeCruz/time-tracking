@@ -195,3 +195,52 @@ body {
     margin-bottom: 0;
     font-size: .75rem;
 }
+
+@media screen and (max-width: 560px) {
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+
+    .perfil{
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+    }
+
+    .registro{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 94%;
+        height: auto;
+    }
+
+    .perfil__nombre >p{
+        margin-top: 5px;
+    }
+
+    .cardCSub{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        padding: 20px;
+        height: 80px;
+    }
+
+
+    .lbTiempo{
+        position: absolute;;
+        left: 10px;
+        
+    }
+
+    .last{
+        margin: auto 30px auto auto;
+       
+    }
+   
+}
