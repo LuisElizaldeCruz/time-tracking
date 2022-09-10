@@ -1,5 +1,5 @@
 
-const res = fetch("./data.json")
+let res = fetch("./data.json")
     .then((res) => {
         // console.log(res);
         if (res.ok) {
@@ -17,7 +17,7 @@ const res = fetch("./data.json")
         console.log(lblTiempo);
         gRegistro.addEventListener("click", (e) => {
             const registro = e.target.textContent;
-            const contador = 0;
+            let contador = 0;
             // console.log(registro);
             if (e.target.matches(".reg")) {//referencia a etiquetas Dayli Weekly Monthly
                 json.forEach(el => {
