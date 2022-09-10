@@ -1,5 +1,5 @@
 
-let res = fetch("./data.json")
+const res = fetch("./data.json")
     .then((res) => {
         // console.log(res);
         if (res.ok) {
@@ -11,13 +11,13 @@ let res = fetch("./data.json")
     })
     .then(json => {
         //  console.log(json);
-        let gRegistro = document.querySelector(".registro");
-        let lblTiempo = document.querySelectorAll(".lbTiempo");
-        let lblLasTime = document.querySelectorAll(".last");
+        const gRegistro = document.querySelector(".registro");
+        const lblTiempo = document.querySelectorAll(".lbTiempo");
+        const lblLasTime = document.querySelectorAll(".last");
         console.log(lblTiempo);
         gRegistro.addEventListener("click", (e) => {
-            let registro = e.target.textContent;
-            let contador = 0;
+            const registro = e.target.textContent;
+            const contador = 0;
             // console.log(registro);
             if (e.target.matches(".reg")) {//referencia a etiquetas Dayli Weekly Monthly
                 json.forEach(el => {
